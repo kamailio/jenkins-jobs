@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Welcome to the Kamailio Debian repositories</h1>
+
+  <p>This is the Debian/Ubuntu package repository of <a href="http://www.kamailio.org/">Kamailio</a>,
+    powered by <a href="http://jenkins-debian-glue.org/">jenkins-debian-glue.org</a> and
+    sponsored by <a href="https://www.kamailio.org/w/donations/">donations</a>.</p>
+
+  <p>Build information available at <a href="https://jenkins.kamailio.org/">Jenkins system</a>.</p>
+  <p><a href="https://github.com/sipwise/rtpengine/">RTPengine</a> <a
+    href="https://deb.kamailio.org/rtpengine.html">builds</a></p>
+  <p>Usage instructions:</p>
+
+  <pre>
+    % wget -O- https://deb.kamailio.org/kamailiodebkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/kamailio.gpg
+  </pre>
+
+  <p>add key info in repository definition:</p>
+  <pre>
+    deb [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio${VER} ${CODENAME} main
+  </pre>
+  <p>Old method:</p>
+  <pre>
+    % wget -O- http://deb.kamailio.org/kamailiodebkey.gpg | sudo apt-key add -
+  </pre>
+
+  <p>
+  <ul><a id="list"></a>
+    <li><a href="#stable">Stable releases</a>
+      <ul>
+        <li><a href="#stable60">latest release of 6.0</a></li>
+        <li><a href="#stable58">latest release of 5.8</a></li>
+        <li><a href="#stable57">latest release of 5.7</a></li>
+        <li><a href="#stable56">latest release of 5.6</a></li>
+        <li><a href="#stable55">latest release of 5.5</a></li>
+      </ul>
+    </li>
+    <li><a href="#dev">Nightly built packages</a>
+      <ul>
+        <li><a href="#dev_master">master</a></li>
+        <li><a href="#dev60">branch 6.0</a></li>
+        <li><a href="#dev58">branch 5.8</a></li>
+        <li><a href="#dev57">branch 5.7</a></li>
+        <li><a href="#dev56">branch 5.6</a></li>
+        <li><a href="#dev55">branch 5.5</a></li>
+      </ul>
+    </li>
+  </ul>
+  </p>
+
+  <h2><a id="stable">Stable releases</a></h2>
+  <p>Debian/Ubuntu packages with latest changes from <a id="stable60">6.0
+    branch</a> (choose the distribution you're interested in):</p>
+
+  <pre>
+  deb     http://deb.kamailio.org/kamailio60 stretch main
+  deb-src http://deb.kamailio.org/kamailio60 stretch main
+
+  deb     http://deb.kamailio.org/kamailio60 buster main
+  deb-src http://deb.kamailio.org/kamailio60 buster main
+
+  deb     http://deb.kamailio.org/kamailio60 bullseye main
+  deb-src http://deb.kamailio.org/kamailio60 bullseye main
+
+  deb     http://deb.kamailio.org/kamailio60 bookworm main
+  deb-src http://deb.kamailio.org/kamailio60 bookworm main
+
+  deb     http://deb.kamailio.org/kamailio60 trixie main
+  deb-src http://deb.kamailio.org/kamailio60 trixie main
+
+  deb     http://deb.kamailio.org/kamailio60 bionic main
+  deb-src http://deb.kamailio.org/kamailio60 bionic main
+
+  deb     http://deb.kamailio.org/kamailio60 focal main
+  deb-src http://deb.kamailio.org/kamailio60 focal main
+
+  deb     http://deb.kamailio.org/kamailio60 jammy main
+  deb-src http://deb.kamailio.org/kamailio60 jammy main
+
+  deb     http://deb.kamailio.org/kamailio60 noble main
+  deb-src http://deb.kamailio.org/kamailio60 noble main
+  </pre>
+
+  <p>Debian/Ubuntu packages with latest changes from <a id="stable58">5.8
+    branch</a> (choose the distribution you're interested in):</p>
+
+  <pre>
+  deb     http://deb.kamailio.org/kamailio58 stretch main
+  deb-src http://deb.kamailio.org/kamailio58 stretch main
+
+  deb     http://deb.kamailio.org/kamailio58 buster main
+  deb-src http://deb.kamailio.org/kamailio58 buster main
+
+  deb     http://deb.kamailio.org/kamailio58 bullseye main
+  deb-src http://deb.kamailio.org/kamailio58 bullseye main
+
+  deb     http://deb.kamailio.org/kamailio58 bookworm main
+  deb-src http://deb.kamailio.org/kamailio58 bookworm main
+
+  deb     http://deb.kamailio.org/kamailio58 xenial main
+  deb-src http://deb.kamailio.org/kamailio58 xenial main
+
+  deb     http://deb.kamailio.org/kamailio58 bionic main
+  deb-src http://deb.kamailio.org/kamailio58 bionic main
+
+  deb     http://deb.kamailio.org/kamailio58 focal main
+  deb-src http://deb.kamailio.org/kamailio58 focal main
+
+  deb     http://deb.kamailio.org/kamailio58 jammy main
+  deb-src http://deb.kamailio.org/kamailio58 jammy main
+
+  deb     http://deb.kamailio.org/kamailio58 noble main
+  deb-src http://deb.kamailio.org/kamailio58 noble main
+  </pre>
+
+  <p>Debian/Ubuntu packages with latest changes from <a id="stable57">5.7
+    branch</a> (choose the distribution you're interested in):</p>
+
+  <pre>
+  deb     http://deb.kamailio.org/kamailio57 stretch main
+  deb-src http://deb.kamailio.org/kamailio57 stretch main
+
+  deb     http://deb.kamailio.org/kamailio57 buster main
+  deb-src http://deb.kamailio.org/kamailio57 buster main
+
+  deb     http://deb.kamailio.org/kamailio57 bullseye main
+  deb-src http://deb.kamailio.org/kamailio57 bullseye main
+
+  deb     http://deb.kamailio.org/kamailio57 bookworm main
+  deb-src http://deb.kamailio.org/kamailio57 bookworm main
+
+  deb     http://deb.kamailio.org/kamailio57 xenial main
+  deb-src http://deb.kamailio.org/kamailio57 xenial main
+
+  deb     http://deb.kamailio.org/kamailio57 bionic main
+  deb-src http://deb.kamailio.org/kamailio57 bionic main
+
+  deb     http://deb.kamailio.org/kamailio57 focal main
+  deb-src http://deb.kamailio.org/kamailio57 focal main
+
+  deb     http://deb.kamailio.org/kamailio57 jammy main
+  deb-src http://deb.kamailio.org/kamailio57 jammy main
+  </pre>
+
+  <p>Debian/Ubuntu packages with latest changes from <a id="stable56">5.6
+      branch</a> (choose the distribution you're interested in):</p>
+
+  <pre>
+deb     http://deb.kamailio.org/kamailio56 jessie  main
+deb-src http://deb.kamailio.org/kamailio56 jessie  main
+
+deb http://deb.kamailio.org/kamailio56 stretch main
+deb-src http://deb.kamailio.org/kamailio56 stretch main
+
+deb http://deb.kamailio.org/kamailio56 buster main
+deb-src http://deb.kamailio.org/kamailio56 buster main
+
+deb http://deb.kamailio.org/kamailio56 bullseye main
+deb-src http://deb.kamailio.org/kamailio56 bullseye main
+
+deb http://deb.kamailio.org/kamailio56 bookworm main
+deb-src http://deb.kamailio.org/kamailio56 bookworm main
+
+deb http://deb.kamailio.org/kamailio56 trusty main
+deb-src http://deb.kamailio.org/kamailio56 trusty main
+
+deb http://deb.kamailio.org/kamailio56 xenial main
+deb-src http://deb.kamailio.org/kamailio56 xenial main
+
+deb http://deb.kamailio.org/kamailio56 bionic main
+deb-src http://deb.kamailio.org/kamailio56 bionic main
+
+deb http://deb.kamailio.org/kamailio56 focal main
+deb-src http://deb.kamailio.org/kamailio56 focal main
+
+deb http://deb.kamailio.org/kamailio56 jammy main
+deb-src http://deb.kamailio.org/kamailio56 jammy main
+</pre>
+
+  <p>Debian/Ubuntu packages with latest changes from <a id="stable55">5.5
+      branch</a> (choose the distribution you're interested in):</p>
+  <pre>
+deb     http://deb.kamailio.org/kamailio55 jessie  main
+deb-src http://deb.kamailio.org/kamailio55 jessie  main
+
+deb     http://deb.kamailio.org/kamailio55 stretch main
+deb-src http://deb.kamailio.org/kamailio55 stretch main
+
+deb     http://deb.kamailio.org/kamailio55 buster main
+deb-src http://deb.kamailio.org/kamailio55 buster main
+
+deb     http://deb.kamailio.org/kamailio55 bullseye main
+deb-src http://deb.kamailio.org/kamailio55 bullseye main
+
+deb     http://deb.kamailio.org/kamailio55 trusty main
+deb-src http://deb.kamailio.org/kamailio55 trusty main
+
+deb     http://deb.kamailio.org/kamailio55 xenial main
+deb-src http://deb.kamailio.org/kamailio55 xenial main
+
+deb     http://deb.kamailio.org/kamailio55 bionic main
+deb-src http://deb.kamailio.org/kamailio55 bionic main
+
+deb     http://deb.kamailio.org/kamailio55 focal main
+deb-src http://deb.kamailio.org/kamailio55 focal main
+</pre>
+
+  <h2><a id="dev">Nightly built packages</a></h2>
+
+  <p>Debian/Ubuntu packages with latest changes from <a id="dev_master">master
+      branch</a> (choose the distribution you're interested in):</p>
+
+  <pre>
+deb     http://deb.kamailio.org/kamailiodev-nightly stretch main
+deb-src http://deb.kamailio.org/kamailiodev-nightly stretch main
+
+deb     http://deb.kamailio.org/kamailiodev-nightly buster main
+deb-src http://deb.kamailio.org/kamailiodev-nightly buster main
+
+deb     http://deb.kamailio.org/kamailiodev-nightly bullseye main
+deb-src http://deb.kamailio.org/kamailiodev-nightly bullseye main
+
+deb     http://deb.kamailio.org/kamailiodev-nightly bookworm main
+deb-src http://deb.kamailio.org/kamailiodev-nightly bookworm main
+
+deb     http://deb.kamailio.org/kamailiodev-nightly trixie main
+deb-src http://deb.kamailio.org/kamailiodev-nightly trixie main
+
+deb     http://deb.kamailio.org/kamailiodev-nightly bionic main
+deb-src http://deb.kamailio.org/kamailiodev-nightly bionic main
+
+deb     http://deb.kamailio.org/kamailiodev-nightly focal main
+deb-src http://deb.kamailio.org/kamailiodev-nightly focal main
+
+deb     http://deb.kamailio.org/kamailiodev-nightly jammy main
+deb-src http://deb.kamailio.org/kamailiodev-nightly jammy main
+
+deb     http://deb.kamailio.org/kamailiodev-nightly noble main
+deb-src http://deb.kamailio.org/kamailiodev-nightly noble main
+</pre>
+
+<p>Debian/Ubuntu packages with latest changes from <a id="dev60">6.0
+  branch</a> (choose the distribution you're interested in):</p>
+
+<pre>
+deb     http://deb.kamailio.org/kamailio60-nightly stretch main
+deb-src http://deb.kamailio.org/kamailio60-nightly stretch main
+
+deb     http://deb.kamailio.org/kamailio60-nightly buster main
+deb-src http://deb.kamailio.org/kamailio60-nightly buster main
+
+deb     http://deb.kamailio.org/kamailio60-nightly bullseye main
+deb-src http://deb.kamailio.org/kamailio60-nightly bullseye main
+
+deb     http://deb.kamailio.org/kamailio60-nightly bookworm main
+deb-src http://deb.kamailio.org/kamailio60-nightly bookworm main
+
+deb     http://deb.kamailio.org/kamailio60-nightly trixie main
+deb-src http://deb.kamailio.org/kamailio60-nightly trixie main
+
+deb     http://deb.kamailio.org/kamailio60-nightly bionic main
+deb-src http://deb.kamailio.org/kamailio60-nightly bionic main
+
+deb     http://deb.kamailio.org/kamailio60-nightly focal main
+deb-src http://deb.kamailio.org/kamailio60-nightly focal main
+
+deb     http://deb.kamailio.org/kamailio60-nightly jammy main
+deb-src http://deb.kamailio.org/kamailio60-nightly jammy main
+
+deb     http://deb.kamailio.org/kamailio60-nightly noble main
+deb-src http://deb.kamailio.org/kamailio60-nightly noble main
+</pre>
+
+<p>Debian/Ubuntu packages with latest changes from <a id="dev58">5.8
+  branch</a> (choose the distribution you're interested in):</p>
+
+<pre>
+deb     http://deb.kamailio.org/kamailio58-nightly stretch main
+deb-src http://deb.kamailio.org/kamailio58-nightly stretch main
+
+deb     http://deb.kamailio.org/kamailio58-nightly buster main
+deb-src http://deb.kamailio.org/kamailio58-nightly buster main
+
+deb     http://deb.kamailio.org/kamailio58-nightly bullseye main
+deb-src http://deb.kamailio.org/kamailio58-nightly bullseye main
+
+deb     http://deb.kamailio.org/kamailio58-nightly bookworm main
+deb-src http://deb.kamailio.org/kamailio58-nightly bookworm main
+
+deb     http://deb.kamailio.org/kamailio58-nightly xenial main
+deb-src http://deb.kamailio.org/kamailio58-nightly xenial main
+
+deb     http://deb.kamailio.org/kamailio58-nightly bionic main
+deb-src http://deb.kamailio.org/kamailio58-nightly bionic main
+
+deb     http://deb.kamailio.org/kamailio58-nightly focal main
+deb-src http://deb.kamailio.org/kamailio58-nightly focal main
+
+deb     http://deb.kamailio.org/kamailio58-nightly jammy main
+deb-src http://deb.kamailio.org/kamailio58-nightly jammy main
+
+deb     http://deb.kamailio.org/kamailio58-nightly noble main
+deb-src http://deb.kamailio.org/kamailio58-nightly noble main
+</pre>
+
+<p>Debian/Ubuntu packages with latest changes from <a id="dev57">5.7
+  branch</a> (choose the distribution you're interested in):</p>
+
+<pre>
+deb     http://deb.kamailio.org/kamailio57-nightly stretch main
+deb-src http://deb.kamailio.org/kamailio57-nightly stretch main
+
+deb     http://deb.kamailio.org/kamailio57-nightly buster main
+deb-src http://deb.kamailio.org/kamailio57-nightly buster main
+
+deb     http://deb.kamailio.org/kamailio57-nightly bullseye main
+deb-src http://deb.kamailio.org/kamailio57-nightly bullseye main
+
+deb     http://deb.kamailio.org/kamailio57-nightly bookworm main
+deb-src http://deb.kamailio.org/kamailio57-nightly bookworm main
+
+deb     http://deb.kamailio.org/kamailio57-nightly xenial main
+deb-src http://deb.kamailio.org/kamailio57-nightly xenial main
+
+deb     http://deb.kamailio.org/kamailio57-nightly bionic main
+deb-src http://deb.kamailio.org/kamailio57-nightly bionic main
+
+deb     http://deb.kamailio.org/kamailio57-nightly focal main
+deb-src http://deb.kamailio.org/kamailio57-nightly focal main
+
+deb     http://deb.kamailio.org/kamailio57-nightly jammy main
+deb-src http://deb.kamailio.org/kamailio57-nightly jammy main
+</pre>
+
+  <p>Debian/Ubuntu packages with latest changes from <a id="dev56">5.6
+      branch</a> (choose the distribution you're interested in):</p>
+
+  <pre>
+deb     http://deb.kamailio.org/kamailio56-nightly jessie  main
+deb-src http://deb.kamailio.org/kamailio56-nightly jessie  main
+
+deb     http://deb.kamailio.org/kamailio56-nightly stretch main
+deb-src http://deb.kamailio.org/kamailio56-nightly stretch main
+
+deb     http://deb.kamailio.org/kamailio56-nightly buster main
+deb-src http://deb.kamailio.org/kamailio56-nightly buster main
+
+deb     http://deb.kamailio.org/kamailio56-nightly bullseye main
+deb-src http://deb.kamailio.org/kamailio56-nightly bullseye main
+
+deb     http://deb.kamailio.org/kamailio56-nightly bookworm main
+deb-src http://deb.kamailio.org/kamailio56-nightly bookworm main
+
+deb     http://deb.kamailio.org/kamailio56-nightly trusty main
+deb-src http://deb.kamailio.org/kamailio56-nightly trusty main
+
+deb     http://deb.kamailio.org/kamailio56-nightly xenial main
+deb-src http://deb.kamailio.org/kamailio56-nightly xenial main
+
+deb     http://deb.kamailio.org/kamailio56-nightly bionic main
+deb-src http://deb.kamailio.org/kamailio56-nightly bionic main
+
+deb     http://deb.kamailio.org/kamailio56-nightly focal main
+deb-src http://deb.kamailio.org/kamailio56-nightly focal main
+
+deb     http://deb.kamailio.org/kamailio56-nightly jammy main
+deb-src http://deb.kamailio.org/kamailio56-nightly jammy main
+</pre>
+
+  <p>Debian/Ubuntu packages with latest changes from <a id="dev55">5.5
+      branch</a> (choose the distribution you're interested in):</p>
+
+  <pre>
+deb http://deb.kamailio.org/kamailio55-nightly wheezy main
+deb-src http://deb.kamailio.org/kamailio55-nightly wheezy main
+
+deb     http://deb.kamailio.org/kamailio55-nightly jessie  main
+deb-src http://deb.kamailio.org/kamailio55-nightly jessie  main
+
+deb     http://deb.kamailio.org/kamailio55-nightly stretch main
+deb-src http://deb.kamailio.org/kamailio55-nightly stretch main
+
+deb     http://deb.kamailio.org/kamailio55-nightly buster main
+deb-src http://deb.kamailio.org/kamailio55-nightly buster main
+
+deb     http://deb.kamailio.org/kamailio55-nightly bullseye main
+deb-src http://deb.kamailio.org/kamailio55-nightly bullseye main
+
+deb     http://deb.kamailio.org/kamailio55-nightly trusty main
+deb-src http://deb.kamailio.org/kamailio55-nightly trusty main
+
+deb     http://deb.kamailio.org/kamailio55-nightly xenial main
+deb-src http://deb.kamailio.org/kamailio55-nightly xenial main
+
+deb     http://deb.kamailio.org/kamailio55-nightly bionic main
+deb-src http://deb.kamailio.org/kamailio55-nightly bionic main
+
+deb     http://deb.kamailio.org/kamailio55-nightly focal main
+deb-src http://deb.kamailio.org/kamailio55-nightly focal main
+</pre>
+
+</body>
+
+</html>
