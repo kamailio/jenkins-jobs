@@ -1,0 +1,39 @@
+#!/bin/bash
+flavour=debian
+
+# shellcheck disable=SC1091
+source /etc/jenkins/pbuilderrc
+export MIRROR=${MIRRORSITE}
+
+case "${distribution:-}" in
+  bionic|xenial|trusty|precise|focal|jammy|noble)
+    flavour=ubuntu
+    ;;
+esac
+
+if [ ${flavour} = ubuntu ] ; then
+    export PIUPARTS_COMPONENTS=main,universe,restricted,multiverse
+    echo "*** using components [${PIUPARTS_COMPONENTS}] ***"
+fi
+
+EXTRA_REPO=$(echo "${OTHERMIRROR}"|cut -d'|' -f1)
+
+echo "*** flavour=${flavour} architecture=${architecture:-} mirror=${MIRROR} extra-repo=${EXTRA_REPO} ***"
+
+OPS=("--ignore=/usr/bin/db_sql" "--ignore=/usr/share/python/pyversions.pyc")
+OPS+=("--extra-repo=${EXTRA_REPO}")
+case "${distribution:-}" in
+    focal) OPS+=("--ignore=/etc/localtime");;
+esac
+
+# sadly piuparts always returns with exit code 1 :((
+sudo piuparts_wrapper -D ${flavour} -d "${distribution}" "${OPS[@]}" \
+    "${PWD}"/artifacts/*.deb || true
+
+if [ -f piuparts.txt ] ; then
+    # generate TAP report
+    piuparts_tap piuparts.txt > piuparts.tap
+else
+	echo "*** No piuparts.txt report ***"
+	exit 1
+fi
