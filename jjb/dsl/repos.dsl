@@ -17,7 +17,7 @@ pipeline {
               ARCHITECTURES="{{ architectures|join(' ')}} source"
             }
             steps {
-                sh "/home/admin/kamailio-deb-jenkins/scripts/jdg-repository"
+                sh "/home/admin/jenkins-jobs/scripts/jdg-repository"
             }
         }
         stage('store artifacts') {

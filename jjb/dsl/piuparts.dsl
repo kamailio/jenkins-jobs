@@ -14,7 +14,7 @@ pipeline {
         }
         stage('piuparts run') {
             steps {
-                sh "/home/admin/kamailio-deb-jenkins/scripts/jdg-piuparts"
+                sh "/home/admin/jenkins-jobs/scripts/jdg-piuparts"
             }
         }
         stage('store artifacts') {

@@ -35,7 +35,7 @@ pipeline {
                 debian_dir="{{ debian_dir }}"
             }
             steps {
-                sh '/home/admin/kamailio-deb-jenkins/scripts/jdg-generate-source'
+                sh '/home/admin/jenkins-jobs/scripts/jdg-generate-source'
             }
         }
         stage('store artifacts') {

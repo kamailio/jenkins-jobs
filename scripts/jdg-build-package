@@ -8,7 +8,7 @@ export BUILD_ONLY=true
 export SUDO_CMD=sudo
 # shellcheck disable=SC2154
 export COWBUILDER_DIST=$distribution
-export POST_BUILD_HOOK=/home/admin/kamailio-deb-jenkins/scripts/jdg-debc
+export POST_BUILD_HOOK=/home/admin/jenkins-jobs/scripts/jdg-debc
 export LINTIAN=true
 export ADDITIONAL_BUILDRESULTS+=('../*lintian.txt')
 

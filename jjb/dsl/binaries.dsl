@@ -28,7 +28,7 @@ pipeline {
 {%- endif %}
         stage('Build') {
             steps {
-                sh '/home/admin/kamailio-deb-jenkins/scripts/jdg-build-package'
+                sh '/home/admin/jenkins-jobs/scripts/jdg-build-package'
             }
             post {
                 success {

@@ -9,7 +9,7 @@
     email_body: |-
       Check console output at ${{BUILD_URL}} to view the results.\n\n${{CHANGES}}\n -------------------------------------------------- \n ${{BUILD_LOG, maxLines=100, escapeHtml=false}}
     debian_dir: pkg/deb
-    debian_profiles: /home/admin/kamailio-deb-jenkins/scripts/rtpengine-profiles
+    debian_profiles: /home/admin/jenkins-jobs/scripts/rtpengine-profiles
     logrotate_keep: &logrotate_keep
      5
     architectures: !!python/tuple &architectures
