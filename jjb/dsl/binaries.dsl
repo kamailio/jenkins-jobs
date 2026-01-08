@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "slave:${distribution}" }
+    agent { label "slave:${distribution}:${architecture}" }
     stages {
         stage("Initialization") {
             steps {
