@@ -27,7 +27,7 @@ pipeline {
         failure {
             emailext body: '{{ email_body }}',
                     to: '{{ email }}',
-                    subject: 'Build failed in Jenkins: $PROJECT_NAME - #$BUILD_NUMBER'
+                    subject: 'Build failed in Jenkins: $PROJECT_NAME - #$BUILD_DISPLAY_NAME'
         }
     }
 }
