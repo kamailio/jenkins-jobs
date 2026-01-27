@@ -51,6 +51,18 @@
     disabled: false
 
 - project:
+    name: kamailio61-nightly
+    logrotate_keep: *logrotate_keep
+    repos: *repos
+    refspec: *refbranch
+    branch: 'refs/heads/6.1'
+    browser_url: *browserurl
+    distributions: !!python/tuple [trixie, bookworm, bullseye, jammy, noble]
+    architectures: *architectures
+    jobs: *jobs_simple
+    disabled: false
+
+- project:
     name: kamailio60-nightly
     logrotate_keep: *logrotate_keep
     repos: *repos
@@ -87,6 +99,20 @@
     disabled: false
 
 # build based on tags
+- project:
+    name: kamailio61
+    views:
+      - '{name}'
+    logrotate_keep: *logrotate_keep
+    repos: *repos
+    refspec: *reftag
+    branch: ':refs/tags/6\\.1\\.\\d+'
+    browser_url: *browserurl
+    distributions: !!python/tuple [trixie, bookworm, bullseye, jammy, noble]
+    architectures: *architectures
+    jobs: *jobs_simple
+    disabled: false
+
 - project:
     name: kamailio60
     views:
