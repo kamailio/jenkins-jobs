@@ -1,63 +1,92 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kamailio deb repositories</title>
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/repo.css" rel="stylesheet">
+</head>
 
 <body>
-  <h1>Welcome to the Kamailio Debian repositories</h1>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" id="topBlock">
+            <div class="p-3" id="logo">
+                <a class="navbar-brand" href="https://www.kamailio.org"><img src="img/kamailio-logo-2015-140x64.png"
+                        width="140" height="64"></a>
+            </div>
+            <div class="d-flex flex-row-reverse">
+                <a href="https://www.facebook.com/Kamailio" title="facebook" target="_blank"><i
+                        class="p-2 bi bi-facebook"></i></a>
+                <a href="https://twitter.com/kamailio" title="twitter" target="_blank"><i
+                        class="p-2 bi bi-twitter"></i></a>
+                <a href="https://www.kamailio.org/w/feed/" title="feed" target="_blank"><i
+                        class="p-2 bi bi-rss"></i></a>
+                <a href="https://www.youtube.com/channel/UCElq4JNTPd7bs2vbfAAYVJA" title="youtube" target="_blank"><i
+                        class="p-2 bi bi-youtube"></i></a>
+                <a href="https://www.linkedin.com/groups?gid=145924" title="linkedin" target="_blank"><i
+                        class="p-2 bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="container mb-3"></div>
+        <div class="card text-center" id="infoBlock">
+            <h1 class="card-header">Kamailio Debian repositories</h1>
+            <div class="card-body">
+                <h5 class="card-title">Info</h5>
+                <p class="card-text">This is the Debian/Ubuntu package repository of <a
+                        href="http://www.kamailio.org/">Kamailio</a>,
+                    powered by <a href="http://jenkins-debian-glue.org/">jenkins-debian-glue.org</a> and
+                    sponsored by <a href="https://www.kamailio.org/w/donations/">donations</a>.</p>
 
-  <p>This is the Debian/Ubuntu package repository of <a href="http://www.kamailio.org/">Kamailio</a>,
-    powered by <a href="http://jenkins-debian-glue.org/">jenkins-debian-glue.org</a> and
-    sponsored by <a href="https://www.kamailio.org/w/donations/">donations</a>.</p>
-
-  <p>Build information available at <a href="https://jenkins.kamailio.org/">Jenkins system</a>.</p>
-  <p><a href="https://github.com/sipwise/rtpengine/">RTPengine</a> <a
-    href="https://deb.kamailio.org/rtpengine.html">builds</a></p>
-  <p>Usage instructions:</p>
-
-  <pre>
-    % wget -O- https://deb.kamailio.org/kamailiodebkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/kamailio.gpg
-  </pre>
-
-  <p>add key info in repository definition:</p>
-  <pre>
-    deb [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio${VER} ${CODENAME} main
-  </pre>
-  <p>Old method:</p>
-  <pre>
-    % wget -O- http://deb.kamailio.org/kamailiodebkey.gpg | sudo apt-key add -
-  </pre>
-
-  <p>
-  <ul><a id="list"></a>
-    <li><a href="#stable">Stable releases</a>
-      <ul>
-        <li><a href="#stable61">latest release of 6.1</a></li>
-        <li><a href="#stable60">latest release of 6.0</a></li>
-        <li><a href="#stable58">latest release of 5.8</a></li>
-        <li><a href="#stable57">latest release of 5.7</a></li>
-        <li><a href="#stable56">latest release of 5.6</a></li>
-        <li><a href="#stable55">latest release of 5.5</a></li>
-      </ul>
-    </li>
-    <li><a href="#dev">Nightly built packages</a>
-      <ul>
-        <li><a href="#dev_master">master</a></li>
-        <li><a href="#dev61">branch 6.1</a></li>
-        <li><a href="#dev60">branch 6.0</a></li>
-        <li><a href="#dev58">branch 5.8</a></li>
-        <li><a href="#dev57">branch 5.7</a></li>
-        <li><a href="#dev56">branch 5.6</a></li>
-        <li><a href="#dev55">branch 5.5</a></li>
-      </ul>
-    </li>
-  </ul>
-  </p>
-
-  <h2><a id="stable">Stable releases</a></h2>
-
-    <p>Debian/Ubuntu packages with latest changes from <a id="stable61">6.1
-    branch</a> (choose the distribution you're interested in):</p>
-
-  <pre>
+                <p><a href="https://github.com/sipwise/rtpengine/">RTPengine</a> <a
+                        href="https://deb.kamailio.org/rtpengine.html">builds</a></p>
+                <h5 class="card-title">Usage instructions:</h5>
+                <pre class="pre-scrollable">% wget -O- https://deb.kamailio.org/kamailiodebkey.gpg | gpg --dearmor \
+| sudo tee /usr/share/keyrings/kamailio.gpg</pre>
+                <p>add key info in repository definition:</p>
+                <pre
+                    class="pre-scrollable">deb [signed-by=/usr/share/keyrings/kamailio.gpg] http://deb.kamailio.org/kamailio${VER} ${CODENAME} main</pre>
+                <p>Old method:</p>
+                <pre
+                    class="pre-scrollable">% wget -O- http://deb.kamailio.org/kamailiodebkey.gpg | sudo apt-key add -</pre>
+            </div>
+        </div>
+        <div class="container mb-3"></div>
+        <div class="container" id="stable-block">
+            <div class="row align-items-start">
+                <div class="col">
+                    <div class="header-series p-2">
+                        <h2 class="text-center">Stable release builds</h2>
+                    </div>
+                    <nav class="border">
+                        <div class="nav nav-tabs" id="nav-stable" role="tablist">
+                            <button class="nav-link active" id="nav-stable61-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-stable61" type="button" role="tab" aria-controls="nav-stable61"
+                                aria-selected="true">6.1</button>
+                            <button class="nav-link" id="nav-stable60-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-stable60" type="button" role="tab" aria-controls="nav-stable60"
+                                aria-selected="true">6.0</button>
+                            <button class="nav-link" id="nav-stable58-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-stable58" type="button" role="tab" aria-controls="nav-stable58"
+                                aria-selected="true">5.8</button>
+                            <button class="nav-link" id="nav-stable57-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-stable57" type="button" role="tab" aria-controls="nav-stable57"
+                                aria-selected="true">5.7</button>
+                            <button class="nav-link" id="nav-stable56-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-stable56" type="button" role="tab" aria-controls="nav-stable56"
+                                aria-selected="true">5.6</button>
+                            <button class="nav-link" id="nav-stable55-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-stable55" type="button" role="tab" aria-controls="nav-stable55"
+                                aria-selected="true">5.5</button>
+                        </div>
+                        <div class="tab-content" id="nav-stable-tabContent">
+                            <div class="tab-pane fade show active" id="nav-stable61" role="tabpanel"
+                                aria-labelledby="nav-stable61-tab" tabindex="0">
+                                <pre class="pre-scrollable text-light bg-dark">
 deb     http://deb.kamailio.org/kamailio61 bullseye main
 deb-src http://deb.kamailio.org/kamailio61 bullseye main
 
@@ -73,104 +102,100 @@ deb-src http://deb.kamailio.org/kamailio61 jammy main
 deb     http://deb.kamailio.org/kamailio61 noble main
 deb-src http://deb.kamailio.org/kamailio61 noble main
 </pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-stable60" role="tabpanel"
+                                aria-labelledby="nav-stable60-tab" tabindex="0">
+                                <pre class="pre-scrollable">
+deb     http://deb.kamailio.org/kamailio60 stretch main
+deb-src http://deb.kamailio.org/kamailio60 stretch main
 
-  <p>Debian/Ubuntu packages with latest changes from <a id="stable60">6.0
-    branch</a> (choose the distribution you're interested in):</p>
+deb     http://deb.kamailio.org/kamailio60 buster main
+deb-src http://deb.kamailio.org/kamailio60 buster main
 
-  <pre>
-  deb     http://deb.kamailio.org/kamailio60 stretch main
-  deb-src http://deb.kamailio.org/kamailio60 stretch main
+deb     http://deb.kamailio.org/kamailio60 bullseye main
+deb-src http://deb.kamailio.org/kamailio60 bullseye main
 
-  deb     http://deb.kamailio.org/kamailio60 buster main
-  deb-src http://deb.kamailio.org/kamailio60 buster main
+deb     http://deb.kamailio.org/kamailio60 bookworm main
+deb-src http://deb.kamailio.org/kamailio60 bookworm main
 
-  deb     http://deb.kamailio.org/kamailio60 bullseye main
-  deb-src http://deb.kamailio.org/kamailio60 bullseye main
+deb     http://deb.kamailio.org/kamailio60 trixie main
+deb-src http://deb.kamailio.org/kamailio60 trixie main
 
-  deb     http://deb.kamailio.org/kamailio60 bookworm main
-  deb-src http://deb.kamailio.org/kamailio60 bookworm main
+deb     http://deb.kamailio.org/kamailio60 bionic main
+deb-src http://deb.kamailio.org/kamailio60 bionic main
 
-  deb     http://deb.kamailio.org/kamailio60 trixie main
-  deb-src http://deb.kamailio.org/kamailio60 trixie main
+deb     http://deb.kamailio.org/kamailio60 focal main
+deb-src http://deb.kamailio.org/kamailio60 focal main
 
-  deb     http://deb.kamailio.org/kamailio60 bionic main
-  deb-src http://deb.kamailio.org/kamailio60 bionic main
+deb     http://deb.kamailio.org/kamailio60 jammy main
+deb-src http://deb.kamailio.org/kamailio60 jammy main
 
-  deb     http://deb.kamailio.org/kamailio60 focal main
-  deb-src http://deb.kamailio.org/kamailio60 focal main
+deb     http://deb.kamailio.org/kamailio60 noble main
+deb-src http://deb.kamailio.org/kamailio60 noble main
+</pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-stable58" role="tabpanel"
+                                aria-labelledby="nav-stable58-tab" tabindex="0">
+                                <pre class="pre-scrollable">
+deb     http://deb.kamailio.org/kamailio58 stretch main
+deb-src http://deb.kamailio.org/kamailio58 stretch main
 
-  deb     http://deb.kamailio.org/kamailio60 jammy main
-  deb-src http://deb.kamailio.org/kamailio60 jammy main
+deb     http://deb.kamailio.org/kamailio58 buster main
+deb-src http://deb.kamailio.org/kamailio58 buster main
 
-  deb     http://deb.kamailio.org/kamailio60 noble main
-  deb-src http://deb.kamailio.org/kamailio60 noble main
-  </pre>
+deb     http://deb.kamailio.org/kamailio58 bullseye main
+deb-src http://deb.kamailio.org/kamailio58 bullseye main
 
-  <p>Debian/Ubuntu packages with latest changes from <a id="stable58">5.8
-    branch</a> (choose the distribution you're interested in):</p>
+deb     http://deb.kamailio.org/kamailio58 bookworm main
+deb-src http://deb.kamailio.org/kamailio58 bookworm main
 
-  <pre>
-  deb     http://deb.kamailio.org/kamailio58 stretch main
-  deb-src http://deb.kamailio.org/kamailio58 stretch main
+deb     http://deb.kamailio.org/kamailio58 xenial main
+deb-src http://deb.kamailio.org/kamailio58 xenial main
 
-  deb     http://deb.kamailio.org/kamailio58 buster main
-  deb-src http://deb.kamailio.org/kamailio58 buster main
+deb     http://deb.kamailio.org/kamailio58 bionic main
+deb-src http://deb.kamailio.org/kamailio58 bionic main
 
-  deb     http://deb.kamailio.org/kamailio58 bullseye main
-  deb-src http://deb.kamailio.org/kamailio58 bullseye main
+deb     http://deb.kamailio.org/kamailio58 focal main
+deb-src http://deb.kamailio.org/kamailio58 focal main
 
-  deb     http://deb.kamailio.org/kamailio58 bookworm main
-  deb-src http://deb.kamailio.org/kamailio58 bookworm main
+deb     http://deb.kamailio.org/kamailio58 jammy main
+deb-src http://deb.kamailio.org/kamailio58 jammy main
 
-  deb     http://deb.kamailio.org/kamailio58 xenial main
-  deb-src http://deb.kamailio.org/kamailio58 xenial main
+deb     http://deb.kamailio.org/kamailio58 noble main
+deb-src http://deb.kamailio.org/kamailio58 noble main
+</pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-stable57" role="tabpanel"
+                                aria-labelledby="nav-stable57-tab" tabindex="0">
+                                <pre class="pre-scrollable">
+deb     http://deb.kamailio.org/kamailio57 stretch main
+deb-src http://deb.kamailio.org/kamailio57 stretch main
 
-  deb     http://deb.kamailio.org/kamailio58 bionic main
-  deb-src http://deb.kamailio.org/kamailio58 bionic main
+deb     http://deb.kamailio.org/kamailio57 buster main
+deb-src http://deb.kamailio.org/kamailio57 buster main
 
-  deb     http://deb.kamailio.org/kamailio58 focal main
-  deb-src http://deb.kamailio.org/kamailio58 focal main
+deb     http://deb.kamailio.org/kamailio57 bullseye main
+deb-src http://deb.kamailio.org/kamailio57 bullseye main
 
-  deb     http://deb.kamailio.org/kamailio58 jammy main
-  deb-src http://deb.kamailio.org/kamailio58 jammy main
+deb     http://deb.kamailio.org/kamailio57 bookworm main
+deb-src http://deb.kamailio.org/kamailio57 bookworm main
 
-  deb     http://deb.kamailio.org/kamailio58 noble main
-  deb-src http://deb.kamailio.org/kamailio58 noble main
-  </pre>
+deb     http://deb.kamailio.org/kamailio57 xenial main
+deb-src http://deb.kamailio.org/kamailio57 xenial main
 
-  <p>Debian/Ubuntu packages with latest changes from <a id="stable57">5.7
-    branch</a> (choose the distribution you're interested in):</p>
+deb     http://deb.kamailio.org/kamailio57 bionic main
+deb-src http://deb.kamailio.org/kamailio57 bionic main
 
-  <pre>
-  deb     http://deb.kamailio.org/kamailio57 stretch main
-  deb-src http://deb.kamailio.org/kamailio57 stretch main
+deb     http://deb.kamailio.org/kamailio57 focal main
+deb-src http://deb.kamailio.org/kamailio57 focal main
 
-  deb     http://deb.kamailio.org/kamailio57 buster main
-  deb-src http://deb.kamailio.org/kamailio57 buster main
-
-  deb     http://deb.kamailio.org/kamailio57 bullseye main
-  deb-src http://deb.kamailio.org/kamailio57 bullseye main
-
-  deb     http://deb.kamailio.org/kamailio57 bookworm main
-  deb-src http://deb.kamailio.org/kamailio57 bookworm main
-
-  deb     http://deb.kamailio.org/kamailio57 xenial main
-  deb-src http://deb.kamailio.org/kamailio57 xenial main
-
-  deb     http://deb.kamailio.org/kamailio57 bionic main
-  deb-src http://deb.kamailio.org/kamailio57 bionic main
-
-  deb     http://deb.kamailio.org/kamailio57 focal main
-  deb-src http://deb.kamailio.org/kamailio57 focal main
-
-  deb     http://deb.kamailio.org/kamailio57 jammy main
-  deb-src http://deb.kamailio.org/kamailio57 jammy main
-  </pre>
-
-  <p>Debian/Ubuntu packages with latest changes from <a id="stable56">5.6
-      branch</a> (choose the distribution you're interested in):</p>
-
-  <pre>
+deb     http://deb.kamailio.org/kamailio57 jammy main
+deb-src http://deb.kamailio.org/kamailio57 jammy main
+</pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-stable56" role="tabpanel"
+                                aria-labelledby="nav-stable56-tab" tabindex="0">
+                                <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio56 jessie  main
 deb-src http://deb.kamailio.org/kamailio56 jessie  main
 
@@ -201,10 +226,10 @@ deb-src http://deb.kamailio.org/kamailio56 focal main
 deb http://deb.kamailio.org/kamailio56 jammy main
 deb-src http://deb.kamailio.org/kamailio56 jammy main
 </pre>
-
-  <p>Debian/Ubuntu packages with latest changes from <a id="stable55">5.5
-      branch</a> (choose the distribution you're interested in):</p>
-  <pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-stable55" role="tabpanel"
+                                aria-labelledby="nav-stable55-tab" tabindex="0">
+                                <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio55 jessie  main
 deb-src http://deb.kamailio.org/kamailio55 jessie  main
 
@@ -229,19 +254,47 @@ deb-src http://deb.kamailio.org/kamailio55 bionic main
 deb     http://deb.kamailio.org/kamailio55 focal main
 deb-src http://deb.kamailio.org/kamailio55 focal main
 </pre>
-
-  <h2><a id="dev">Nightly built packages</a></h2>
-
-  <p>Debian/Ubuntu packages with latest changes from <a id="dev_master">master
-      branch</a> (choose the distribution you're interested in):</p>
-
-  <pre>
-deb     http://deb.kamailio.org/kamailiodev-nightly stretch main
-deb-src http://deb.kamailio.org/kamailiodev-nightly stretch main
-
-deb     http://deb.kamailio.org/kamailiodev-nightly buster main
-deb-src http://deb.kamailio.org/kamailiodev-nightly buster main
-
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-3"></div>
+        <div class="container" id="nigthly-block">
+            <div class="row align-items-start">
+                <div class="col">
+                    <div class="header-series p-2">
+                        <h2 class="text-center">Nightly builds</h2>
+                    </div>
+                    <nav class="border">
+                        <div class="nav nav-tabs" id="nav-dev" role="tablist">
+                            <button class="nav-link active" id="nav-master-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-master" type="button" role="tab" aria-controls="nav-master"
+                                aria-selected="true">master branch</button>
+                            <button class="nav-link" id="nav-dev61-tab" data-bs-toggle="tab" data-bs-target="#nav-dev61"
+                                type="button" role="tab" aria-controls="nav-dev61" aria-selected="true">6.1
+                                branch</button>
+                            <button class="nav-link" id="nav-dev60-tab" data-bs-toggle="tab" data-bs-target="#nav-dev60"
+                                type="button" role="tab" aria-controls="nav-dev60" aria-selected="true">6.0
+                                branch</button>
+                            <button class="nav-link" id="nav-dev58-tab" data-bs-toggle="tab" data-bs-target="#nav-dev58"
+                                type="button" role="tab" aria-controls="nav-dev58" aria-selected="true">5.8
+                                branch</button>
+                            <button class="nav-link" id="nav-dev57-tab" data-bs-toggle="tab" data-bs-target="#nav-dev57"
+                                type="button" role="tab" aria-controls="nav-dev57" aria-selected="true">5.7
+                                branch</button>
+                            <button class="nav-link" id="nav-dev56-tab" data-bs-toggle="tab" data-bs-target="#nav-dev56"
+                                type="button" role="tab" aria-controls="nav-dev56" aria-selected="true">5.6
+                                branch</button>
+                            <button class="nav-link" id="nav-dev55-tab" data-bs-toggle="tab" data-bs-target="#nav-dev55"
+                                type="button" role="tab" aria-controls="nav-dev55" aria-selected="true">5.5
+                                branch</button>
+                        </div>
+                        <div class="tab-content" id="nav-dev-tabContent">
+                            <div class="tab-pane fade show active" id="nav-master" role="tabpanel"
+                                aria-labelledby="nav-master-tab" tabindex="0">
+                                <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailiodev-nightly bullseye main
 deb-src http://deb.kamailio.org/kamailiodev-nightly bullseye main
 
@@ -251,23 +304,16 @@ deb-src http://deb.kamailio.org/kamailiodev-nightly bookworm main
 deb     http://deb.kamailio.org/kamailiodev-nightly trixie main
 deb-src http://deb.kamailio.org/kamailiodev-nightly trixie main
 
-deb     http://deb.kamailio.org/kamailiodev-nightly bionic main
-deb-src http://deb.kamailio.org/kamailiodev-nightly bionic main
-
-deb     http://deb.kamailio.org/kamailiodev-nightly focal main
-deb-src http://deb.kamailio.org/kamailiodev-nightly focal main
-
 deb     http://deb.kamailio.org/kamailiodev-nightly jammy main
 deb-src http://deb.kamailio.org/kamailiodev-nightly jammy main
 
 deb     http://deb.kamailio.org/kamailiodev-nightly noble main
 deb-src http://deb.kamailio.org/kamailiodev-nightly noble main
 </pre>
-
-  <p>Debian/Ubuntu packages with latest changes from <a id="dev61">master
-      branch</a> (choose the distribution you're interested in):</p>
-
-  <pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-dev61" role="tabpanel" aria-labelledby="nav-dev61-tab"
+                                tabindex="0">
+                                <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio61-nightly bullseye main
 deb-src http://deb.kamailio.org/kamailio61-nightly bullseye main
 
@@ -283,11 +329,10 @@ deb-src http://deb.kamailio.org/kamailio61-nightly jammy main
 deb     http://deb.kamailio.org/kamailio61-nightly noble main
 deb-src http://deb.kamailio.org/kamailio61-nightly noble main
 </pre>
-
-<p>Debian/Ubuntu packages with latest changes from <a id="dev60">6.0
-  branch</a> (choose the distribution you're interested in):</p>
-
-<pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-dev60" role="tabpanel" aria-labelledby="nav-dev60-tab"
+                                tabindex="0">
+                                <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio60-nightly stretch main
 deb-src http://deb.kamailio.org/kamailio60-nightly stretch main
 
@@ -315,11 +360,11 @@ deb-src http://deb.kamailio.org/kamailio60-nightly jammy main
 deb     http://deb.kamailio.org/kamailio60-nightly noble main
 deb-src http://deb.kamailio.org/kamailio60-nightly noble main
 </pre>
-
-<p>Debian/Ubuntu packages with latest changes from <a id="dev58">5.8
-  branch</a> (choose the distribution you're interested in):</p>
-
-<pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-dev58" role="tabpanel" aria-labelledby="nav-dev58-tab"
+                                tabindex="0">
+                                <pre class="pre-scrollable">
+                            <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio58-nightly stretch main
 deb-src http://deb.kamailio.org/kamailio58-nightly stretch main
 
@@ -347,11 +392,11 @@ deb-src http://deb.kamailio.org/kamailio58-nightly jammy main
 deb     http://deb.kamailio.org/kamailio58-nightly noble main
 deb-src http://deb.kamailio.org/kamailio58-nightly noble main
 </pre>
-
-<p>Debian/Ubuntu packages with latest changes from <a id="dev57">5.7
-  branch</a> (choose the distribution you're interested in):</p>
-
-<pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-dev57" role="tabpanel" aria-labelledby="nav-dev57-tab"
+                                tabindex="0">
+                                <pre class="pre-scrollable">
+<pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio57-nightly stretch main
 deb-src http://deb.kamailio.org/kamailio57-nightly stretch main
 
@@ -376,11 +421,11 @@ deb-src http://deb.kamailio.org/kamailio57-nightly focal main
 deb     http://deb.kamailio.org/kamailio57-nightly jammy main
 deb-src http://deb.kamailio.org/kamailio57-nightly jammy main
 </pre>
-
-  <p>Debian/Ubuntu packages with latest changes from <a id="dev56">5.6
-      branch</a> (choose the distribution you're interested in):</p>
-
-  <pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-dev56" role="tabpanel" aria-labelledby="nav-dev56-tab"
+                                tabindex="0">
+                                <pre class="pre-scrollable">
+<pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio56-nightly jessie  main
 deb-src http://deb.kamailio.org/kamailio56-nightly jessie  main
 
@@ -411,11 +456,11 @@ deb-src http://deb.kamailio.org/kamailio56-nightly focal main
 deb     http://deb.kamailio.org/kamailio56-nightly jammy main
 deb-src http://deb.kamailio.org/kamailio56-nightly jammy main
 </pre>
-
-  <p>Debian/Ubuntu packages with latest changes from <a id="dev55">5.5
-      branch</a> (choose the distribution you're interested in):</p>
-
-  <pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-dev55" role="tabpanel" aria-labelledby="nav-dev55-tab"
+                                tabindex="0">
+                                <pre class="pre-scrollable">
+<pre class="pre-scrollable">
 deb http://deb.kamailio.org/kamailio55-nightly wheezy main
 deb-src http://deb.kamailio.org/kamailio55-nightly wheezy main
 
@@ -443,7 +488,51 @@ deb-src http://deb.kamailio.org/kamailio55-nightly bionic main
 deb     http://deb.kamailio.org/kamailio55-nightly focal main
 deb-src http://deb.kamailio.org/kamailio55-nightly focal main
 </pre>
+                            </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-3"></div>
+        <div class="text-center" id="footterBlock">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <a href="https://jenkins.kamailio.org/" target="_blank"><img src="img/jenkins_snow.png"
+                            class="img-fluid rounded-start"></a>
+                </div>
+                <div class="card col-md-4">
+                    <div class="row g-0">
+                        <div class="card-header">Build Info</div>
+                        <div class="card-body">
+                            <p>available at <a href="https://jenkins.kamailio.org/" target="_blank"><i
+                                        class="bi bi-jenkins"></i>Kamailio
+                                    Jenkins system</a>.</p>
+                        </div>
+                    </div>
 
+                    <div class="row g-0">
+                        <div class="card-header">Sponsored via</div>
+                        <div class="card-body"></div>
+                        <div class="card-img-bottom">
+                            <a href="https://opencollective.com/kamailio" target="_blank">
+                                <img src="img/oc-logo-watercolor-256.png" height="32" width="32">
+                                <img src="img/open_collective.svg" height="32">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://jenkins.kamailio.org/" target="_blank"><img src="img/jenkins_war.png"
+                            class="img-fluid rounded-start"></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-3"></div>
+    </div>
+    <div class="container-fluid p-3" id="bottomBlock">
+        <div class="text-center">Continuous Development Since 2001</div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

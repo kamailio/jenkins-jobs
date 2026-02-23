@@ -1,0 +1,28 @@
+#topBlock {
+  background-color: #69a83c;
+}
+
+#bottomBlock  {
+  background-color: #69a83c;
+}
+
+#logo {
+  background-color: white;
+}
+
+pre {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+}
+
+.header-series {
+  background-color: gainsboro;
+  color: #008000;
+}
+
+.card-header {
+  background-color: #69a83c;
+  border-bottom-color: #69a83c;
+}
