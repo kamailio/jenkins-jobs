@@ -64,29 +64,29 @@
                     </div>
                     <nav class="border">
                         <div class="nav nav-tabs" id="nav-stable" role="tablist">
-                            <button class="nav-link active" id="nav-stable61-tab" data-bs-toggle="tab"
+                            <a class="btn nav-link active" id="nav-stable61-tab" data-bs-toggle="tab" href="#stable61"
                                 data-bs-target="#nav-stable61" type="button" role="tab" aria-controls="nav-stable61"
-                                aria-selected="true">6.1</button>
-                            <button class="nav-link" id="nav-stable60-tab" data-bs-toggle="tab"
+                                aria-selected="true">6.1</a>
+                            <a class="btn nav-link" id="nav-stable60-tab" data-bs-toggle="tab" href="#stable60"
                                 data-bs-target="#nav-stable60" type="button" role="tab" aria-controls="nav-stable60"
-                                aria-selected="true">6.0</button>
-                            <button class="nav-link" id="nav-stable58-tab" data-bs-toggle="tab"
+                                aria-selected="true">6.0</a>
+                            <a class="btn nav-link" id="nav-stable58-tab" data-bs-toggle="tab" href="#stable58"
                                 data-bs-target="#nav-stable58" type="button" role="tab" aria-controls="nav-stable58"
-                                aria-selected="true">5.8</button>
-                            <button class="nav-link" id="nav-stable57-tab" data-bs-toggle="tab"
+                                aria-selected="true">5.8</a>
+                            <a class="btn nav-link" id="nav-stable57-tab" data-bs-toggle="tab" href="#stable57"
                                 data-bs-target="#nav-stable57" type="button" role="tab" aria-controls="nav-stable57"
-                                aria-selected="true">5.7</button>
-                            <button class="nav-link" id="nav-stable56-tab" data-bs-toggle="tab"
+                                aria-selected="true">5.7</a>
+                            <a class="btn nav-link" id="nav-stable56-tab" data-bs-toggle="tab" href="#stable56"
                                 data-bs-target="#nav-stable56" type="button" role="tab" aria-controls="nav-stable56"
-                                aria-selected="true">5.6</button>
-                            <button class="nav-link" id="nav-stable55-tab" data-bs-toggle="tab"
+                                aria-selected="true">5.6</a>
+                            <a class="btn nav-link" id="nav-stable55-tab" data-bs-toggle="tab" href="#stable55"
                                 data-bs-target="#nav-stable55" type="button" role="tab" aria-controls="nav-stable55"
-                                aria-selected="true">5.5</button>
+                                aria-selected="true">5.5</a>
                         </div>
                         <div class="tab-content" id="nav-stable-tabContent">
                             <div class="tab-pane fade show active" id="nav-stable61" role="tabpanel"
                                 aria-labelledby="nav-stable61-tab" tabindex="0">
-                                <pre class="pre-scrollable text-light bg-dark">
+                                <pre id="stable61" class="pre-scrollable text-light bg-dark">
 deb     http://deb.kamailio.org/kamailio61 bullseye main
 deb-src http://deb.kamailio.org/kamailio61 bullseye main
 
@@ -105,7 +105,7 @@ deb-src http://deb.kamailio.org/kamailio61 noble main
                             </div>
                             <div class="tab-pane fade" id="nav-stable60" role="tabpanel"
                                 aria-labelledby="nav-stable60-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="stable60" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio60 stretch main
 deb-src http://deb.kamailio.org/kamailio60 stretch main
 
@@ -136,7 +136,7 @@ deb-src http://deb.kamailio.org/kamailio60 noble main
                             </div>
                             <div class="tab-pane fade" id="nav-stable58" role="tabpanel"
                                 aria-labelledby="nav-stable58-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="stable58" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio58 stretch main
 deb-src http://deb.kamailio.org/kamailio58 stretch main
 
@@ -167,7 +167,7 @@ deb-src http://deb.kamailio.org/kamailio58 noble main
                             </div>
                             <div class="tab-pane fade" id="nav-stable57" role="tabpanel"
                                 aria-labelledby="nav-stable57-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="stable57" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio57 stretch main
 deb-src http://deb.kamailio.org/kamailio57 stretch main
 
@@ -195,7 +195,7 @@ deb-src http://deb.kamailio.org/kamailio57 jammy main
                             </div>
                             <div class="tab-pane fade" id="nav-stable56" role="tabpanel"
                                 aria-labelledby="nav-stable56-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="stable56" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio56 jessie  main
 deb-src http://deb.kamailio.org/kamailio56 jessie  main
 
@@ -229,7 +229,7 @@ deb-src http://deb.kamailio.org/kamailio56 jammy main
                             </div>
                             <div class="tab-pane fade" id="nav-stable55" role="tabpanel"
                                 aria-labelledby="nav-stable55-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id=stable55" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio55 jessie  main
 deb-src http://deb.kamailio.org/kamailio55 jessie  main
 
@@ -269,32 +269,38 @@ deb-src http://deb.kamailio.org/kamailio55 focal main
                     </div>
                     <nav class="border">
                         <div class="nav nav-tabs" id="nav-dev" role="tablist">
-                            <button class="nav-link active" id="nav-master-tab" data-bs-toggle="tab"
+                            <a class="btn nav-link active" id="nav-master-tab" data-bs-toggle="tab" href="#master"
                                 data-bs-target="#nav-master" type="button" role="tab" aria-controls="nav-master"
-                                aria-selected="true">master branch</button>
-                            <button class="nav-link" id="nav-dev61-tab" data-bs-toggle="tab" data-bs-target="#nav-dev61"
-                                type="button" role="tab" aria-controls="nav-dev61" aria-selected="true">6.1
+                                aria-selected="true">master branch</a>
+                            <a class="btn nav-link" id="nav-dev61-tab" href="#dev61" data-bs-toggle="tab"
+                                data-bs-target="#nav-dev61" type="button" role="tab" aria-controls="nav-dev61"
+                                aria-selected="true">6.1
                                 branch</button>
-                            <button class="nav-link" id="nav-dev60-tab" data-bs-toggle="tab" data-bs-target="#nav-dev60"
-                                type="button" role="tab" aria-controls="nav-dev60" aria-selected="true">6.0
-                                branch</button>
-                            <button class="nav-link" id="nav-dev58-tab" data-bs-toggle="tab" data-bs-target="#nav-dev58"
-                                type="button" role="tab" aria-controls="nav-dev58" aria-selected="true">5.8
-                                branch</button>
-                            <button class="nav-link" id="nav-dev57-tab" data-bs-toggle="tab" data-bs-target="#nav-dev57"
-                                type="button" role="tab" aria-controls="nav-dev57" aria-selected="true">5.7
-                                branch</button>
-                            <button class="nav-link" id="nav-dev56-tab" data-bs-toggle="tab" data-bs-target="#nav-dev56"
-                                type="button" role="tab" aria-controls="nav-dev56" aria-selected="true">5.6
-                                branch</button>
-                            <button class="nav-link" id="nav-dev55-tab" data-bs-toggle="tab" data-bs-target="#nav-dev55"
-                                type="button" role="tab" aria-controls="nav-dev55" aria-selected="true">5.5
-                                branch</button>
+                                <a class="btn nav-link" id="nav-dev60-tab" href="#dev60" data-bs-toggle="tab"
+                                    data-bs-target="#nav-dev60" type="button" role="tab" aria-controls="nav-dev60"
+                                    aria-selected="true">6.0
+                                    branch</a>
+                                <a class="btn nav-link" id="nav-dev58-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-dev58" href="#dev58" type="button" role="tab"
+                                    aria-controls="nav-dev58" aria-selected="true">5.8
+                                    branch</a>
+                                <a class="btn nav-link" id="nav-dev57-tab" href="#dev57" data-bs-toggle="tab"
+                                    data-bs-target="#nav-dev57" type="button" role="tab" aria-controls="nav-dev57"
+                                    aria-selected="true">5.7
+                                    branch</a>
+                                <a class="btn nav-link" id="nav-dev56-tab" href="#dev56" data-bs-toggle="tab"
+                                    data-bs-target="#nav-dev56" type="button" role="tab" aria-controls="nav-dev56"
+                                    aria-selected="true">5.6
+                                    branch</a>
+                                <a class="btn nav-link" id="nav-dev55-tab" href="#dev55" data-bs-toggle="tab"
+                                    data-bs-target="#nav-dev55" type="button" role="tab" aria-controls="nav-dev55"
+                                    aria-selected="true">5.5
+                                    branch</a>
                         </div>
                         <div class="tab-content" id="nav-dev-tabContent">
                             <div class="tab-pane fade show active" id="nav-master" role="tabpanel"
                                 aria-labelledby="nav-master-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="master" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailiodev-nightly bullseye main
 deb-src http://deb.kamailio.org/kamailiodev-nightly bullseye main
 
@@ -313,7 +319,7 @@ deb-src http://deb.kamailio.org/kamailiodev-nightly noble main
                             </div>
                             <div class="tab-pane fade" id="nav-dev61" role="tabpanel" aria-labelledby="nav-dev61-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev61" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio61-nightly bullseye main
 deb-src http://deb.kamailio.org/kamailio61-nightly bullseye main
 
@@ -332,7 +338,7 @@ deb-src http://deb.kamailio.org/kamailio61-nightly noble main
                             </div>
                             <div class="tab-pane fade" id="nav-dev60" role="tabpanel" aria-labelledby="nav-dev60-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev60" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio60-nightly stretch main
 deb-src http://deb.kamailio.org/kamailio60-nightly stretch main
 
@@ -364,7 +370,7 @@ deb-src http://deb.kamailio.org/kamailio60-nightly noble main
                             <div class="tab-pane fade" id="nav-dev58" role="tabpanel" aria-labelledby="nav-dev58-tab"
                                 tabindex="0">
                                 <pre class="pre-scrollable">
-                            <pre class="pre-scrollable">
+                            <pre id="dev58" class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio58-nightly stretch main
 deb-src http://deb.kamailio.org/kamailio58-nightly stretch main
 
@@ -395,7 +401,7 @@ deb-src http://deb.kamailio.org/kamailio58-nightly noble main
                             </div>
                             <div class="tab-pane fade" id="nav-dev57" role="tabpanel" aria-labelledby="nav-dev57-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev57" class="pre-scrollable">
 <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio57-nightly stretch main
 deb-src http://deb.kamailio.org/kamailio57-nightly stretch main
@@ -424,7 +430,7 @@ deb-src http://deb.kamailio.org/kamailio57-nightly jammy main
                             </div>
                             <div class="tab-pane fade" id="nav-dev56" role="tabpanel" aria-labelledby="nav-dev56-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev56" class="pre-scrollable">
 <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/kamailio56-nightly jessie  main
 deb-src http://deb.kamailio.org/kamailio56-nightly jessie  main
@@ -459,7 +465,7 @@ deb-src http://deb.kamailio.org/kamailio56-nightly jammy main
                             </div>
                             <div class="tab-pane fade" id="nav-dev55" role="tabpanel" aria-labelledby="nav-dev55-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev55" class="pre-scrollable">
 <pre class="pre-scrollable">
 deb http://deb.kamailio.org/kamailio55-nightly wheezy main
 deb-src http://deb.kamailio.org/kamailio55-nightly wheezy main
@@ -533,6 +539,8 @@ deb-src http://deb.kamailio.org/kamailio55-nightly focal main
         <div class="text-center">Continuous Development Since 2001</div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.slim.min.js"></script>
+    <script src="js/tabs.js"></script>
 </body>
 
 </html>

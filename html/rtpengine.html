@@ -62,26 +62,26 @@
                     </div>
                     <nav class="border">
                         <div class="nav nav-tabs" id="nav-stable" role="tablist">
-                            <button class="nav-link active" id="nav-stable135-tab" data-bs-toggle="tab"
+                            <a class="btn nav-link active" id="nav-stable135-tab" data-bs-toggle="tab" href="#stable135"
                                 data-bs-target="#nav-stable135" type="button" role="tab" aria-controls="nav-stable135"
-                                aria-selected="true">mr13.5</button>
-                            <button class="nav-link" id="nav-stable125-tab" data-bs-toggle="tab"
+                                aria-selected="true">mr13.5</a>
+                            <a class="btn nav-link" id="nav-stable125-tab" data-bs-toggle="tab" href="#stable125"
                                 data-bs-target="#nav-stable125" type="button" role="tab" aria-controls="nav-stable125"
-                                aria-selected="true">mr12.5</button>
-                            <button class="nav-link" id="nav-stable115-tab" data-bs-toggle="tab"
+                                aria-selected="true">mr12.5</a>
+                            <a class="btn nav-link" id="nav-stable115-tab" data-bs-toggle="tab" href="#stable115"
                                 data-bs-target="#nav-stable115" type="button" role="tab" aria-controls="nav-stable115"
-                                aria-selected="true">mr11.5</button>
-                            <button class="nav-link" id="nav-stable105-tab" data-bs-toggle="tab"
+                                aria-selected="true">mr11.5</a>
+                            <a class="btn nav-link" id="nav-stable105-tab" data-bs-toggle="tab" href="#stable105"
                                 data-bs-target="#nav-stable105" type="button" role="tab" aria-controls="nav-stable105"
-                                aria-selected="true">mr10.5</button>
-                            <button class="nav-link" id="nav-stable95-tab" data-bs-toggle="tab"
+                                aria-selected="true">mr10.5</a>
+                            <a class="btn nav-link" id="nav-stable95-tab" data-bs-toggle="tab" href="#stable95"
                                 data-bs-target="#nav-stable95" type="button" role="tab" aria-controls="nav-stable95"
-                                aria-selected="true">mr9.5</button>
+                                aria-selected="true">mr9.5</a>
                         </div>
                         <div class="tab-content" id="nav-stable-tabContent">
                             <div class="tab-pane fade show active" id="nav-stable135" role="tabpanel"
                                 aria-labelledby="nav-stable135-tab" tabindex="0">
-                                <pre class="pre-scrollable text-light bg-dark">
+                                <pre id="stable135" class="pre-scrollable text-light bg-dark">
 deb     http://deb.kamailio.org/rtpengine-mr13.5 trixie  main
 deb-src http://deb.kamailio.org/rtpengine-mr13.5 trixie  main
 
@@ -103,7 +103,7 @@ deb-src http://deb.kamailio.org/rtpengine-mr13.5 focal  main
                             </div>
                             <div class="tab-pane fade" id="nav-stable125" role="tabpanel"
                                 aria-labelledby="nav-stable125-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="stable125" class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr12.5 bookworm  main
 deb-src http://deb.kamailio.org/rtpengine-mr12.5 bookworm  main
 
@@ -125,7 +125,7 @@ deb-src http://deb.kamailio.org/rtpengine-mr12.5 focal  main
                             </div>
                             <div class="tab-pane fade" id="nav-stable115" role="tabpanel"
                                 aria-labelledby="nav-stable115-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="stable115" class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr11.5 bookworm  main
 deb-src http://deb.kamailio.org/rtpengine-mr11.5 bookworm  main
 
@@ -144,7 +144,7 @@ deb-src http://deb.kamailio.org/rtpengine-mr11.5 focal  main
                             </div>
                             <div class="tab-pane fade" id="nav-stable105" role="tabpanel"
                                 aria-labelledby="nav-stable105-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="stable105" class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr10.5 bookworm  main
 deb-src http://deb.kamailio.org/rtpengine-mr10.5 bookworm  main
 
@@ -160,7 +160,7 @@ deb-src http://deb.kamailio.org/rtpengine-mr10.5 focal  main
                             </div>
                             <div class="tab-pane fade" id="nav-stable95" role="tabpanel"
                                 aria-labelledby="nav-stable95-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="stable95" class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr9.5 bookworm  main
 deb-src http://deb.kamailio.org/rtpengine-mr9.5 bookworm  main
 
@@ -188,29 +188,34 @@ deb-src http://deb.kamailio.org/rtpengine-mr9.5 focal  main
                     </div>
                     <nav class="border">
                         <div class="nav nav-tabs" id="nav-dev" role="tablist">
-                            <button class="nav-link active" id="nav-master-tab" data-bs-toggle="tab"
+                            <a class="btn nav-link active" id="nav-master-tab" data-bs-toggle="tab" href="#master"
                                 data-bs-target="#nav-master" type="button" role="tab" aria-controls="nav-master"
-                                aria-selected="true">master branch</button>
-                            <button class="nav-link" id="nav-dev135-tab" data-bs-toggle="tab" data-bs-target="#nav-dev135"
-                                type="button" role="tab" aria-controls="nav-dev135" aria-selected="true">mr13.5
-                                branch</button>
-                            <button class="nav-link" id="nav-dev125-tab" data-bs-toggle="tab" data-bs-target="#nav-dev125"
-                                type="button" role="tab" aria-controls="nav-dev125" aria-selected="true">mr12.5
-                                branch</button>
-                            <button class="nav-link" id="nav-dev115-tab" data-bs-toggle="tab" data-bs-target="#nav-dev115"
-                                type="button" role="tab" aria-controls="nav-dev115" aria-selected="true">mr11.5
-                                branch</button>
-                            <button class="nav-link" id="nav-dev105-tab" data-bs-toggle="tab" data-bs-target="#nav-dev105"
-                                type="button" role="tab" aria-controls="nav-dev105" aria-selected="true">mr10.5
-                                branch</button>
-                            <button class="nav-link" id="nav-dev95-tab" data-bs-toggle="tab" data-bs-target="#nav-dev95"
-                                type="button" role="tab" aria-controls="nav-dev95" aria-selected="true">mr9.5
-                                branch</button>
+                                aria-selected="true">master branch</a>
+                            <a class="btn nav-link" id="nav-dev135-tab" href="#dev135" data-bs-toggle="tab"
+                                data-bs-target="#nav-dev135" type="button" role="tab" aria-controls="nav-dev135"
+                                aria-selected="true">mr13.5
+                                branch</a>
+                            <a class="btn nav-link" id="nav-dev125-tab" href="#dev125" data-bs-toggle="tab"
+                                data-bs-target="#nav-dev125" type="button" role="tab" aria-controls="nav-dev125"
+                                aria-selected="true">mr12.5
+                                branch</a>
+                            <a class="btn nav-link" id="nav-dev115-tab" href="#dev115" data-bs-toggle="tab"
+                                data-bs-target="#nav-dev115" type="button" role="tab" aria-controls="nav-dev115"
+                                aria-selected="true">mr11.5
+                                branch</a>
+                            <a class="btn nav-link" id="nav-dev105-tab" href="#dev105" data-bs-toggle="tab"
+                                data-bs-target="#nav-dev105" type="button" role="tab" aria-controls="nav-dev105"
+                                aria-selected="true">mr10.5
+                                branch</a>
+                            <a class="btn nav-link" id="nav-dev95-tab" href="#dev95" data-bs-toggle="tab"
+                                data-bs-target="#nav-dev95" type="button" role="tab" aria-controls="nav-dev95"
+                                aria-selected="true">mr9.5
+                                branch</a>
                         </div>
                         <div class="tab-content" id="nav-dev-tabContent">
                             <div class="tab-pane fade show active" id="nav-master" role="tabpanel"
                                 aria-labelledby="nav-master-tab" tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="master" class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-nightly trixie  main
 deb-src http://deb.kamailio.org/rtpengine-nightly trixie  main
 
@@ -232,7 +237,7 @@ deb-src http://deb.kamailio.org/rtpengine-nightly focal  main
                             </div>
                             <div class="tab-pane fade" id="nav-dev135" role="tabpanel" aria-labelledby="nav-dev135-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev135" class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr13.5-nightly trixie  main
 deb-src http://deb.kamailio.org/rtpengine-mr13.5-nightly trixie  main
 
@@ -254,7 +259,7 @@ deb-src http://deb.kamailio.org/rtpengine-mr13.5-nightly focal  main
                             </div>
                             <div class="tab-pane fade" id="nav-dev125" role="tabpanel" aria-labelledby="nav-dev125-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev125" class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr12.5-nightly bookworm  main
 deb-src http://deb.kamailio.org/rtpengine-mr12.5-nightly bookworm  main
 
@@ -277,7 +282,7 @@ deb-src http://deb.kamailio.org/rtpengine-mr12.5-nightly focal  main
                             <div class="tab-pane fade" id="nav-dev115" role="tabpanel" aria-labelledby="nav-dev115-tab"
                                 tabindex="0">
                                 <pre class="pre-scrollable">
-                            <pre class="pre-scrollable">
+                            <pre id="dev115" class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr11.5-nightly bookworm  main
 deb-src http://deb.kamailio.org/rtpengine-mr11.5-nightly bookworm  main
 
@@ -296,7 +301,7 @@ deb-src http://deb.kamailio.org/rtpengine-mr11.5-nightly focal  main
                             </div>
                             <div class="tab-pane fade" id="nav-dev105" role="tabpanel" aria-labelledby="nav-dev105-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev105" class="pre-scrollable">
 <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr10.5-nightly bookworm  main
 deb-src http://deb.kamailio.org/rtpengine-mr10.5-nightly bookworm  main
@@ -313,7 +318,7 @@ deb-src http://deb.kamailio.org/rtpengine-mr10.5-nightly focal  main
                             </div>
                             <div class="tab-pane fade" id="nav-dev95" role="tabpanel" aria-labelledby="nav-dev95-tab"
                                 tabindex="0">
-                                <pre class="pre-scrollable">
+                                <pre id="dev95" class="pre-scrollable">
 <pre class="pre-scrollable">
 deb     http://deb.kamailio.org/rtpengine-mr9.5-nightly bookworm  main
 deb-src http://deb.kamailio.org/rtpengine-mr9.5-nightly bookworm  main
@@ -372,6 +377,8 @@ deb-src http://deb.kamailio.org/rtpengine-mr9.5-nightly focal  main
         <div class="text-center">Continuous Development Since 2001</div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.slim.min.js"></script>
+    <script src="js/tabs.js"></script>
 </body>
 
 </html>
