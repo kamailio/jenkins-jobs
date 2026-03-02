@@ -36,14 +36,11 @@
         <div class="card text-center" id="infoBlock">
             <h1 class="card-header">Kamailio Debian repositories</h1>
             <div class="card-body">
-                <h5 class="card-title">Info</h5>
                 <p class="card-text">This is the Debian/Ubuntu package repository of <a
                         href="http://www.kamailio.org/">Kamailio</a>,
                     powered by <a href="http://jenkins-debian-glue.org/">jenkins-debian-glue.org</a> and
-                    sponsored by <a href="https://www.kamailio.org/w/donations/">donations</a>.</p>
-
-                <p><a href="https://github.com/sipwise/rtpengine/">RTPengine</a> <a
-                        href="https://deb.kamailio.org/rtpengine.html">builds</a></p>
+                    sponsored by <a href="https://www.kamailio.org/w/donations/">donations</a>.
+                </p>
                 <h5 class="card-title">Usage instructions:</h5>
                 <pre class="pre-scrollable">% wget -O- https://deb.kamailio.org/kamailiodebkey.gpg | gpg --dearmor \
 | sudo tee /usr/share/keyrings/kamailio.gpg</pre>
@@ -518,12 +515,18 @@ deb-src http://deb.kamailio.org/kamailio55-nightly focal main
 
                     <div class="row g-0">
                         <div class="card-header">Sponsored via</div>
-                        <div class="card-body"></div>
-                        <div class="card-img-bottom">
+                        <div class="card-body p-0"></div>
+                        <div class="card-img-bottom p-2">
                             <a href="https://opencollective.com/kamailio" target="_blank">
                                 <img src="img/oc-logo-watercolor-256.png" height="32" width="32">
                                 <img src="img/open_collective.svg" height="32">
                             </a>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="card-header">RTPengine builds</div>
+                        <div class="card-body">
+                            <p><a href="https://deb.kamailio.org/rtpengine.html">Rtpengine repository</a></p>
                         </div>
                     </div>
                 </div>
