@@ -98,6 +98,15 @@ fi
 rm -rf debian
 cp -a "${BASE_DIR}/${distribution}" debian
 
+case "${JOB_NAME}" in
+  rtpengine*)
+    if ! head -5 debian/control | grep -q 'Priority:' ; then
+      echo "add Priority header"
+      sed -i '/Section: net/a\Priority: optional' debian/control
+    fi
+    ;;
+esac
+
 export DEBEMAIL="Kamailio Package Team <pkg@kamailio.org>"
 
 case "${distribution}" in

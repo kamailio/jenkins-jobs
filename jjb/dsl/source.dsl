@@ -36,7 +36,6 @@ pipeline {
             }
             steps {
                 sh '/home/admin/jenkins-jobs/scripts/jdg-generate-source'
-                sh '/home/admin/jenkins-jobs/scripts/fix-defaults-changes'
             }
         }
         stage('store artifacts') {
