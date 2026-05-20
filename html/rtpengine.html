@@ -62,7 +62,10 @@
                     </div>
                     <nav class="border">
                         <div class="nav nav-tabs" id="nav-stable" role="tablist">
-                            <a class="btn nav-link active" id="nav-stable135-tab" data-bs-toggle="tab" href="#stable135"
+                            <a class="btn nav-link active" id="nav-stable260-tab" data-bs-toggle="tab" href="#stable260"
+                                data-bs-target="#nav-stable260" type="button" role="tab" aria-controls="nav-stable260"
+                                aria-selected="true">mr26.0</a>
+                            <a class="btn nav-link" id="nav-stable135-tab" data-bs-toggle="tab" href="#stable135"
                                 data-bs-target="#nav-stable135" type="button" role="tab" aria-controls="nav-stable135"
                                 aria-selected="true">mr13.5</a>
                             <a class="btn nav-link" id="nav-stable125-tab" data-bs-toggle="tab" href="#stable125"
@@ -79,7 +82,29 @@
                                 aria-selected="true">mr9.5</a>
                         </div>
                         <div class="tab-content" id="nav-stable-tabContent">
-                            <div class="tab-pane fade show active" id="nav-stable135" role="tabpanel"
+                            <div class="tab-pane fade show active" id="nav-stable260" role="tabpanel"
+                                aria-labelledby="nav-stable260-tab" tabindex="0">
+                                <pre id="stable260" class="pre-scrollable text-light bg-dark">
+deb     http://deb.kamailio.org/rtpengine-mr26.0 trixie  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0 trixie  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0 bookworm  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0 bookworm  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0 bullseye  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0 bullseye  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0 noble  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0 noble  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0 jammy  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0 jammy  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0 focal  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0 focal  main
+</pre>
+                            </div>
+                            <div class="tab-pane fade show" id="nav-stable135" role="tabpanel"
                                 aria-labelledby="nav-stable135-tab" tabindex="0">
                                 <pre id="stable135" class="pre-scrollable text-light bg-dark">
 deb     http://deb.kamailio.org/rtpengine-mr13.5 trixie  main
@@ -191,6 +216,10 @@ deb-src http://deb.kamailio.org/rtpengine-mr9.5 focal  main
                             <a class="btn nav-link active" id="nav-master-tab" data-bs-toggle="tab" href="#master"
                                 data-bs-target="#nav-master" type="button" role="tab" aria-controls="nav-master"
                                 aria-selected="true">master branch</a>
+                            <a class="btn nav-link" id="nav-dev260-tab" href="#dev260" data-bs-toggle="tab"
+                                data-bs-target="#nav-dev260" type="button" role="tab" aria-controls="nav-dev260"
+                                aria-selected="true">mr26.0
+                                branch</a>
                             <a class="btn nav-link" id="nav-dev135-tab" href="#dev135" data-bs-toggle="tab"
                                 data-bs-target="#nav-dev135" type="button" role="tab" aria-controls="nav-dev135"
                                 aria-selected="true">mr13.5
@@ -233,6 +262,28 @@ deb-src http://deb.kamailio.org/rtpengine-nightly jammy  main
 
 deb     http://deb.kamailio.org/rtpengine-nightly focal  main
 deb-src http://deb.kamailio.org/rtpengine-nightly focal  main
+</pre>
+                            </div>
+                            <div class="tab-pane fade" id="nav-dev260" role="tabpanel" aria-labelledby="nav-dev260-tab"
+                                tabindex="0">
+                                <pre id="dev260" class="pre-scrollable">
+deb     http://deb.kamailio.org/rtpengine-mr26.0-nightly trixie  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0-nightly trixie  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0-nightly bookworm  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0-nightly bookworm  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0-nightly bullseye  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0-nightly bullseye  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0-nightly noble  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0-nightly noble  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0-nightly jammy  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0-nightly jammy  main
+
+deb     http://deb.kamailio.org/rtpengine-mr26.0-nightly focal  main
+deb-src http://deb.kamailio.org/rtpengine-mr26.0-nightly focal  main
 </pre>
                             </div>
                             <div class="tab-pane fade" id="nav-dev135" role="tabpanel" aria-labelledby="nav-dev135-tab"
