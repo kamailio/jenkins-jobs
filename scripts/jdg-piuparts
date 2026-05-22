@@ -6,7 +6,7 @@ source /etc/jenkins/pbuilderrc
 export MIRROR=${MIRRORSITE}
 
 case "${distribution:-}" in
-  bionic|xenial|trusty|precise|focal|jammy|noble)
+  bionic|xenial|trusty|precise|focal|jammy|noble|resolute)
     flavour=ubuntu
     ;;
 esac

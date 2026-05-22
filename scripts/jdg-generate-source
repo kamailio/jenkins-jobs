@@ -117,9 +117,10 @@ case "${distribution}" in
   focal)    BPO=ubuntu20.04 ;;
   jammy)    BPO=ubuntu22.04 ;;
   noble)    BPO=ubuntu24.04 ;;
+  resolute) BPO=ubuntu26.04 ;;
   bullseye) BPO=bpo11 ;;
   bookworm) BPO=bpo12 ;;
-  trixie) BPO=bpo13 ;;
+  trixie)   BPO=bpo13 ;;
   *)
     echo "${distribution} not supported" >&2
     exit 2 ;;
