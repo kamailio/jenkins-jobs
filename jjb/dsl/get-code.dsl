@@ -1,3 +1,4 @@
+def host = Jenkins.getInstance().getComputer('').getHostName()
 def dists = ["{{ distributions| join('", "') }}"]
 def parallelStagesMap
 
@@ -41,6 +42,9 @@ pipeline {
             }
         }
         stage('trigger parallel map') {
+            when {
+                expression { "${host}" ==~ '^jenkins.kamailio.org' }
+            }
             steps {
                 script {
                     parallel parallelStagesMap
