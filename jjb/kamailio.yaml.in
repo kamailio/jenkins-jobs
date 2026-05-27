@@ -108,7 +108,7 @@
     refspec: *reftag
     branch: ':refs/tags/6\\.1\\.\\d+'
     browser_url: *browserurl
-    distributions: !!python/tuple [trixie, bookworm, bullseye, jammy, noble]
+    distributions: !!python/tuple [trixie, bookworm, bullseye, resolute, noble, jammy]
     architectures: *architectures
     jobs: *jobs_simple
     disabled: false
