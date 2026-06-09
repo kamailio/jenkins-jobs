@@ -58,7 +58,7 @@
     refspec: *refbranch
     branch: 'refs/heads/mr26.0'
     browser_url: *browserurl
-    distributions: !!python/tuple [trixie, bookworm, bullseye, focal, jammy, noble]
+    distributions: !!python/tuple [trixie, bookworm, bullseye, resolute, noble, jammy, focal]
     architectures: *architectures
     jobs: *jobs_simple
     disabled: false
@@ -119,7 +119,7 @@
     refspec: *reftag
     branch: ':refs/tags/mr26\\.0\\.1.\\d+'
     browser_url: *browserurl
-    distributions: !!python/tuple [trixie, bookworm, bullseye, focal, jammy, noble]
+    distributions: !!python/tuple [trixie, bookworm, bullseye, resolute, noble, jammy, focal]
     architectures: *architectures
     jobs: *jobs_simple
     disabled: false
