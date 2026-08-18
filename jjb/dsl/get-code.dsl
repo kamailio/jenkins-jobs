@@ -22,7 +22,7 @@ pipeline {
                             browser: github('{{ browser_url }}'),
                             extensions: [
                                 cleanBeforeCheckout(deleteUntrackedNestedRepositories: true),
-                                cloneOption(noTags: false, reference: '', shallow: false),
+                                cloneOption(noTags: false, reference: '', shallow: false, honorRefspec: true),
                                 [$class: 'RelativeTargetDirectory', relativeTargetDir: 'source']
                             ],
                             userRemoteConfigs: [[name: 'origin', refspec: '{{ refspec }}', url: '{{ repos }}']]
