@@ -11,6 +11,8 @@
     properties:
       - build-discarder:
           days-to-keep: '{logrotate_keep}'
+      - copyartifact:
+          projects: '{name}-source'
     triggers:
       - pollscm:
           cron: '@midnight'
@@ -27,6 +29,10 @@
       - choice:
           name: distribution
           choices: '{obj:distributions}'
+      - copyartifact-build-selector:
+          name: BUILD_SELECTOR
+          which-build: upstream-build
+          description: 'Which build from upstream to copy artifacts from'
     dsl:
       !include-jinja2: dsl/source.dsl
     properties:

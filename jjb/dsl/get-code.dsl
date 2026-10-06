@@ -15,21 +15,28 @@ pipeline {
     stages {
         stage('checkout code') {
             steps {
-                script {
-                    def scmVars = checkout(changelog: false, poll: true,
-                        scm: scmGit(
-                            branches: [[name: '{{ branch }}']],
-                            browser: github('{{ browser_url }}'),
-                            extensions: [
-                                cleanBeforeCheckout(deleteUntrackedNestedRepositories: true),
-                                cloneOption(noTags: false, reference: '', shallow: false, honorRefspec: true),
-                                [$class: 'RelativeTargetDirectory', relativeTargetDir: 'source']
-                            ],
-                            userRemoteConfigs: [[name: 'origin', refspec: '{{ refspec }}', url: '{{ repos }}']]
+                dir('source') {
+                    script {
+                        def scmVars = checkout(changelog: false, poll: true,
+                            scm: scmGit(
+                                branches: [[name: '{{ branch }}']],
+                                browser: github('{{ browser_url }}'),
+                                extensions: [
+                                    cleanBeforeCheckout(deleteUntrackedNestedRepositories: true),
+                                    cloneOption(noTags: false, reference: '', shallow: false, honorRefspec: true)
+                                ],
+                                userRemoteConfigs: [[name: 'origin', refspec: '{{ refspec }}', url: '{{ repos }}']]
+                            )
                         )
-                    )
-                    env.GIT_BRANCH=scmVars.GIT_BRANCH
+                        env.GIT_BRANCH=scmVars.GIT_BRANCH
+                    }
                 }
+            }
+        }
+        stage('store artifacts') {
+            steps {
+                sh 'tar -czf source.tar.gz source'
+                archiveArtifacts artifacts: 'source.tar.gz', fingerprint: true, followSymlinks: false
             }
         }
         stage("generate parallel map") {

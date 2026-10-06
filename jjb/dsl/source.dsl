@@ -8,26 +8,12 @@ pipeline {
         }
         stage('clean workspace') {
             steps {
-                sh 'rm -f ./* || true'
+                deleteDir()
             }
         }
-        stage('checkout code') {
+        stage('copy artifacts') {
             steps {
-                script {
-                    def scmVars = checkout(changelog: false, poll: false,
-                        scm: scmGit(
-                            branches: [[name: '{{ branch }}']],
-                            browser: github('{{ browser_url }}'),
-                            extensions: [
-                                cleanBeforeCheckout(deleteUntrackedNestedRepositories: true),
-                                cloneOption(noTags: false, reference: '', shallow: false),
-                                [$class: 'RelativeTargetDirectory', relativeTargetDir: 'source']
-                            ],
-                            userRemoteConfigs: [[name: 'origin', refspec: '{{ refspec }}', url: '{{ repos }}']]
-                        )
-                    )
-                    env.GIT_BRANCH=scmVars.GIT_BRANCH
-                }
+                copyArtifacts filter: 'source.tar.gz', fingerprintArtifacts: true, projectName: '{{ name }}-get-code', selector: buildParameter('BUILD_SELECTOR')
             }
         }
         stage('Build source') {
@@ -35,6 +21,8 @@ pipeline {
                 debian_dir="{{ debian_dir }}"
             }
             steps {
+                sh 'tar -xzf source.tar.gz'
+                sh 'rm source.tar.gz'
                 sh '/home/admin/jenkins-jobs/scripts/jdg-generate-source'
             }
         }
