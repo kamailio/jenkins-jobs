@@ -21,7 +21,7 @@
     name: '{name}-source'
     project-type: pipeline
     disabled: '{obj:disabled}'
-    concurrent: true
+    concurrent: false
     description: |
       Build Debian source package of {name}.
       <!-- Do NOT edit this job through the web, it is generated via jenkins-job-builder! -->
