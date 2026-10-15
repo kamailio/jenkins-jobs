@@ -1,3 +1,4 @@
+def gitEnvList
 pipeline {
     agent any
     stages {
@@ -13,7 +14,11 @@ pipeline {
         }
         stage('copy artifacts') {
             steps {
-                copyArtifacts filter: 'source.tar.gz', fingerprintArtifacts: true, projectName: '{{ name }}-get-code', selector: buildParameter('BUILD_SELECTOR')
+                copyArtifacts filter: 'source.tar.gz,git.properties', fingerprintArtifacts: true, projectName: '{{ name }}-get-code', selector: buildParameter('BUILD_SELECTOR')
+                script {
+                    def props = readProperties file: "${env.WORKSPACE}/git.properties"
+                    gitEnvList = props.collect { key, value -> "${key}=${value}" }
+                }
             }
         }
         stage('Build source') {
@@ -22,8 +27,10 @@ pipeline {
             }
             steps {
                 sh 'tar -xzf source.tar.gz'
-                sh 'rm source.tar.gz'
-                sh '/home/admin/jenkins-jobs/scripts/jdg-generate-source'
+                sh 'rm source.tar.gz git.properties'
+                withEnv(gitEnvList) {
+                    sh '/home/admin/jenkins-jobs/scripts/jdg-generate-source'
+                }
             }
         }
         stage('store artifacts') {

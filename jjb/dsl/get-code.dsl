@@ -1,6 +1,7 @@
 def host = Jenkins.getInstance().getComputer('').getHostName()
 def dists = ["{{ distributions| join('", "') }}"]
 def parallelStagesMap
+def content = ""
 
 def generateStage(dist) {
     return {
@@ -28,15 +29,25 @@ pipeline {
                                 userRemoteConfigs: [[name: 'origin', refspec: '{{ refspec }}', url: '{{ repos }}']]
                             )
                         )
-                        env.GIT_BRANCH=scmVars.GIT_BRANCH
+                        scmVars.each { key, value ->
+                            content += "${key}=${value}\n"
+                        }
                     }
+                }
+            }
+        }
+        stage('generate properties file') {
+            steps {
+                script {
+                    writeFile file: "git.properties", text: content
+                    sh 'cat git.properties'
                 }
             }
         }
         stage('store artifacts') {
             steps {
                 sh 'tar -czf source.tar.gz source'
-                archiveArtifacts artifacts: 'source.tar.gz', fingerprint: true, followSymlinks: false
+                archiveArtifacts artifacts: 'source.tar.gz,git.properties', fingerprint: true, followSymlinks: false
             }
         }
         stage("generate parallel map") {
