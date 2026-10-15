@@ -28,7 +28,9 @@ pipeline {
 {%- endif %}
         stage('Build') {
             steps {
-                sh '/home/admin/jenkins-jobs/scripts/jdg-build-package'
+                timeout(time: {{ build_timeout }}, unit: 'MINUTES') {
+                    sh '/home/admin/jenkins-jobs/scripts/jdg-build-package'
+                }
             }
             post {
                 success {
