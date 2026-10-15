@@ -13,6 +13,7 @@
      5
     architectures: !!python/tuple &architectures
      - amd64
+    build_timeout: 30
     repos: &repos
       'https://github.com/kamailio/kamcli.git'
     reftag: &reftag

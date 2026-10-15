@@ -14,6 +14,7 @@
     architectures: !!python/tuple &architectures
      - amd64
      - arm64
+    build_timeout: 60
     repos: &repos
       'https://github.com/kamailio/kamailio.git'
     reftag: &reftag

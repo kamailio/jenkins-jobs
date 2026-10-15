@@ -62,6 +62,11 @@
           description: 'Which build from upstream to copy artifacts from'
     dsl:
       !include-jinja2: dsl/binaries.dsl
+    wrappers:
+      - timeout:
+          abort: true
+          type: absolute
+          timeout: {build_timeout}
     properties:
       - build-discarder:
           days-to-keep: '{logrotate_keep}'

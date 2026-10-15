@@ -15,6 +15,7 @@
     architectures: !!python/tuple &architectures
      - amd64
      - arm64
+    build_timeout: 30
     repos: &repos
       'https://github.com/sipwise/rtpengine.git'
     reftag: &reftag
