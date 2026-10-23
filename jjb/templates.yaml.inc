@@ -15,7 +15,7 @@
           projects: '{name}-source'
     triggers:
       - pollscm:
-          cron: '@midnight'
+          cron: '0 0 * * *'
 
 - job-template:
     name: '{name}-source'
